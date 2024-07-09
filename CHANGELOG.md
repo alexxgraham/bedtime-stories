@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.9
+
+### Patch Changes
+
+- 0a765cc: TwinkleTwinkle.jpg replaced to be LittleStar.jpg
+
 ## 0.0.8
 
 ### Patch Changes
