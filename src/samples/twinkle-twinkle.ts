@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import LittleStarCover from './covers/TwinkleTwinkle.jpg';
+import LittleStarCover from './covers/LittleStar.jpg';
 
 export const TwinkleTwinkleBookString = `
 Twinkle, twinkle, little star,
