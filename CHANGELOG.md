@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.10
+
+### Patch Changes
+
+- ba8e43e: added vite dependency for sample cover images
+
 ## 0.0.9
 
 ### Patch Changes
