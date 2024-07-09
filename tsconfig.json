@@ -4,6 +4,7 @@
 		"jsx": "react-jsx",
 		"module": "commonjs",
 		"noEmit": true,
+		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"strict": true,
 		"noUncheckedIndexedAccess": true,
@@ -12,6 +13,9 @@
 		"paths": {
 			"~/*": ["./*"]
 		},
-		"skipLibCheck": true
-	}
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["src"],
+	"exclude": ["src/styles.css"]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.css';
+import './styles.css';
 
 type StoriesProps = {
 	title: string;
@@ -78,7 +78,6 @@ const BookLines = ({ bookString }: { bookString: string | undefined }) => {
 	));
 };
 
-export { styles };
 export { CinderellaBookString } from './samples/cinderella';
 export { GingerbreadManBookString } from './samples/gingerbread-man';
 export { GoldilocksBookString } from './samples/goldilocks';
