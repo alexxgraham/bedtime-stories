@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.6
+
+### Patch Changes
+
+- e43b179: extracted SingleStory component from BedtimeForChild in index
+
 ## 0.0.5
 
 ### Patch Changes
