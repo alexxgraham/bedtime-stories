@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.7
+
+### Patch Changes
+
+- 10fbc25: exported types for component props
+
 ## 0.0.6
 
 ### Patch Changes
