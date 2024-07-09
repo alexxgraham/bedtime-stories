@@ -1,17 +1,8 @@
 import React from 'react';
+import { BedtimeComponentProps, StoriesProps } from 'types/stories';
 import './styles.css';
 
-type StoriesProps = {
-	title: string;
-	author: string;
-	cover: string;
-	ageRating: string;
-	bookLink: string;
-	bookString: string;
-	bookBackgroundColor: string;
-};
-
-export const BedtimeForChild = ({ parentName, child, stories }: { parentName?: string; child: string; stories: StoriesProps[] }) => {
+export const BedtimeForChild = ({ parentName, child, stories }: BedtimeComponentProps) => {
 	const favoriteNeice = (parentName === 'leanna' && child === "Millie Mae Cobleigh's") || child === "Millie Mae's" || child === "Millie's" ? true : false;
 	const notSingleStory = stories.length !== 1;
 
@@ -72,7 +63,6 @@ const SingleStory = ({ story }: { story: StoriesProps | undefined }) => {
 			<div className='story-content'>
 				<article className='story-details' style={{ backgroundColor: `#94a3b875` }}>
 					<BookLines bookString='' />
-					<p className='story-end'>The End</p>
 				</article>
 			</div>
 		);
