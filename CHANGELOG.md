@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.2
+
+### Patch Changes
+
+- c3aa837: added "import './styles.css'" > index.tsx
+
 ## 0.0.1
 
 ### Patch Changes
