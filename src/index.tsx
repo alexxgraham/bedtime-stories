@@ -1,6 +1,5 @@
-import clsx from 'clsx';
 import React from 'react';
-import './styles.css';
+import styles from './styles.css';
 
 type StoriesProps = {
 	title: string;
@@ -10,10 +9,6 @@ type StoriesProps = {
 	bookLink: string;
 	bookString: string;
 	bookBackgroundColor: string;
-};
-
-export const cn = (...inputs: string[]) => {
-	return clsx(inputs);
 };
 
 export const BedtimeForChild = ({ parentName, child, stories }: { parentName: string; child: string; stories: StoriesProps[] }) => {
@@ -83,6 +78,7 @@ const BookLines = ({ bookString }: { bookString: string | undefined }) => {
 	));
 };
 
+export { styles };
 export { CinderellaBookString } from './samples/cinderella';
 export { GingerbreadManBookString } from './samples/gingerbread-man';
 export { GoldilocksBookString } from './samples/goldilocks';
