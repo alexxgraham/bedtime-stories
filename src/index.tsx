@@ -11,7 +11,7 @@ type StoriesProps = {
 	bookBackgroundColor: string;
 };
 
-export const BedtimeForChild = ({ parentName, child, stories }: { parentName: string; child: string; stories: StoriesProps[] }) => {
+export const BedtimeForChild = ({ parentName, child, stories }: { parentName?: string; child: string; stories: StoriesProps[] }) => {
 	const favoriteNeice = (parentName === 'leanna' && child === "Millie Mae Cobleigh's") || child === "Millie Mae's" || child === "Millie's" ? true : false;
 	const notSingleStory = stories.length !== 1;
 
@@ -36,19 +36,7 @@ export const BedtimeForChild = ({ parentName, child, stories }: { parentName: st
 						</p>
 					) : null}
 				</section>
-				<section className={`stories ${notSingleStory ? 'multi-story' : ''}`}>
-					{notSingleStory ? (
-						<Stories stories={stories} />
-					) : (
-						<div className='flex flex-col align-center'>
-							<img src={stories[0]?.cover} alt='' className='story-cover' />
-							<article className='story-details' style={{ backgroundColor: `${stories[0]?.bookBackgroundColor}75` }}>
-								<BookLines bookString={stories[0]?.bookString} />
-								<p className='story-end'>The End</p>
-							</article>
-						</div>
-					)}
-				</section>
+				<section className={`stories ${notSingleStory ? 'multi-story' : ''}`}>{notSingleStory ? <Stories stories={stories} /> : <SingleStory story={stories[0]} />}</section>
 			</article>
 		</>
 	);
@@ -68,14 +56,47 @@ const Stories = ({ stories }: { stories: StoriesProps[] }) => {
 		));
 };
 
-const BookLines = ({ bookString }: { bookString: string | undefined }) => {
-	const lines = bookString?.split(`\n\n`);
-	return lines?.map((line, i) => (
-		<React.Fragment key={i}>
-			<p>{line}</p>
-			<br />
-		</React.Fragment>
-	));
+const SingleStory = ({ story }: { story: StoriesProps | undefined }) => {
+	if (story) {
+		return (
+			<div className='story-content'>
+				<img src={story.cover} alt='' className='story-cover' />
+				<article className='story-details' style={{ backgroundColor: `${story.bookBackgroundColor}75` }}>
+					<BookLines bookString={story.bookString} />
+					<p className='story-end'>The End</p>
+				</article>
+			</div>
+		);
+	} else {
+		return (
+			<div className='story-content'>
+				<article className='story-details' style={{ backgroundColor: `#94a3b875` }}>
+					<BookLines bookString='' />
+					<p className='story-end'>The End</p>
+				</article>
+			</div>
+		);
+	}
+};
+
+const BookLines = ({ bookString }: { bookString: string }) => {
+	if (bookString.length !== 0) {
+		const lines = bookString?.split(`\n\n`);
+		return lines?.map((line, i) => (
+			<React.Fragment key={i}>
+				<p>{line}</p>
+				<br />
+			</React.Fragment>
+		));
+	} else {
+		return (
+			<div>
+				<p>Our Apologies</p>
+				<br />
+				<p>There is no content for this book, please try another.</p>
+			</div>
+		);
+	}
 };
 
 export { CinderellaBookString } from './samples/cinderella';
