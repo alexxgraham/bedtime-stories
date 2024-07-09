@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import GingerbreadManCover from './covers/GingerbreadMan.jpg';
+
 export const GingerbreadManBookString = `
 Once upon a time, an old woman and her husband lived alone in a little old house.
 
@@ -57,3 +60,15 @@ And he opened his mouth and snapped the gingerbread man up.
 
 
 And that was the end of the Gingerbread Man.`;
+
+export const GingerbreadManBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'The Gingerbread Man',
+		author: 'Old Eng. Folk Tale, unk',
+		cover: GingerbreadManCover,
+		ageRating: '3+',
+		bookLink: relativeUrl ? `${relativeUrl}/TheGingerbreadMan` : 'TheGingerbreadMan',
+		bookString: GingerbreadManBookString,
+		bookBackgroundColor: '#fed7aa',
+	};
+};

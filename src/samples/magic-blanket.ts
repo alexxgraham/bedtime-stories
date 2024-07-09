@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import MagicBlanketCover from './covers/MagicBlanket.jpg';
+
 export const MagicBlanketBookString = `
 In a small village nestled between rolling hills and whispering forests, there lived a young girl named Lily. Lily was known for her kindness and her love for adventure.
 
@@ -33,3 +36,15 @@ From that day on, Lily cherished the Magic Blanket and shared its stories with o
 
 
 And so, dear friends, if you ever find yourself in need of a little magic, remember Lily and her extraordinary adventures with the Magic Blanket.`;
+
+export const MagicBlanketBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'The Magic Blanket',
+		author: 'Alex',
+		cover: MagicBlanketCover,
+		ageRating: '0+',
+		bookLink: relativeUrl ? `${relativeUrl}/MagicBlanket` : 'MagicBlanket',
+		bookString: MagicBlanketBookString,
+		bookBackgroundColor: '#fde68a',
+	};
+};

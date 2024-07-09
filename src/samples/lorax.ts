@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import TheLoraxCover from './covers/TheLorax.jpg';
+
 export const TheLoraxBookString = `
 At the far end of town
 
@@ -297,3 +300,15 @@ and all of his friends
 
 
 may come back."`;
+
+export const TheLoraxBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'The Lorax',
+		author: 'Dr. Seuss',
+		cover: TheLoraxCover,
+		ageRating: '3+',
+		bookLink: relativeUrl ? `${relativeUrl}/TheLorax` : 'TheLorax',
+		bookString: TheLoraxBookString,
+		bookBackgroundColor: '#fde68a',
+	};
+};

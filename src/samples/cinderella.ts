@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import CinderellaCover from './covers/Cinderella.jpg';
+
 export const CinderellaBookString = `
 Once upon a time there was a gentleman who married, for his second wife, the proudest and most haughty woman that was ever seen.
 
@@ -246,3 +249,15 @@ She was conducted to the young prince, dressed as she was; he thought her more c
 
 
 Cinderella, who was no less good than beautiful, gave her two sisters lodgings in the palace, and that very same day matched them with two great lords of the court.`;
+
+export const CinderellaBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'Cinderella',
+		author: 'Charles Perrault',
+		cover: CinderellaCover,
+		ageRating: '0+',
+		bookLink: relativeUrl ? `${relativeUrl}/Cinderella` : 'Cinderella',
+		bookString: CinderellaBookString,
+		bookBackgroundColor: '#bae6fd',
+	};
+};

@@ -16,6 +16,6 @@
 		"skipLibCheck": true,
 		"allowSyntheticDefaultImports": true
 	},
-	"include": ["src", "types/styles.d.ts", "types/stories.d.ts"],
+	"include": ["src", "types/styles.d.ts", "types/stories.d.ts", "types/covers.d.ts"],
 	"exclude": ["src/styles.css"]
 }

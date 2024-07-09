@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import ThreeLittlePigsCover from './covers/ThreeLittlePigs.jpg';
+
 export const ThreeLittlePigsBookString = `
 Once upon a time there was an old sow with three little pigs, and as she had not enough to keep them, she sent them out to seek their fortune.
 
@@ -135,3 +138,15 @@ Then the wolf was very angry indeed, and declared he would eat up the little pig
 
 
 When the little pig saw what he was about, he hung on the pot full of water, and made up a blazing fire, and, just as the wolf was coming down, took off the cover, and in fell the wolf; so the little pig put on the cover again in an instant, boiled him up, and ate him for supper, and lived happy ever afterwards.`;
+
+export const ThreeLittlePigsBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'The Three Little Pigs',
+		author: 'James Orchard',
+		cover: ThreeLittlePigsCover,
+		ageRating: '0+',
+		bookLink: relativeUrl ? `${relativeUrl}/ThreeLittlePigs` : 'ThreeLittlePigs',
+		bookString: ThreeLittlePigsBookString,
+		bookBackgroundColor: '#fbcfe8',
+	};
+};

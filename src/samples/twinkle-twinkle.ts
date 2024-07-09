@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import LittleStarCover from './covers/TwinkleTwinkle.jpg';
+
 export const TwinkleTwinkleBookString = `
 Twinkle, twinkle, little star,
 How I wonder what you are!
@@ -49,3 +52,15 @@ Like a diamond in the sky.
 
 Twinkle, twinkle, little star,
 How I wonder what you are!`;
+
+export const TwinkleTwinkleBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'Twinkle Twinkle Little Star',
+		author: 'Jane Taylor',
+		cover: LittleStarCover,
+		ageRating: '0+',
+		bookLink: relativeUrl ? `${relativeUrl}/TwinkleTwinkle` : 'TwinkleTwinkle',
+		bookString: TwinkleTwinkleBookString,
+		bookBackgroundColor: '#c7d2fe',
+	};
+};

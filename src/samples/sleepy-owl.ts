@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import SleepyOwlCover from './covers/SleepyOwl.jpg';
+
 export const SleepyOwlBookString = `
 Once upon a time, in a dense forest nestled between towering trees and sparkling streams, lived a wise old owl named Ollie.
 
@@ -39,3 +42,15 @@ From that day on, Ollie learned to pace himself and take short breaks during his
 
 
 And so, Ollie the owl continued to watch over the forest, wiser and more rested than ever before.`;
+
+export const SleepyOwlBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'The Sleepy Owl',
+		author: 'Alex',
+		cover: SleepyOwlCover,
+		ageRating: '0+',
+		bookLink: relativeUrl ? `${relativeUrl}/SleepyOwl` : 'SleepyOwl',
+		bookString: SleepyOwlBookString,
+		bookBackgroundColor: '#99f6e4',
+	};
+};

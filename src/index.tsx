@@ -3,7 +3,7 @@ import { BedtimeComponentProps, StoriesProps } from 'types/stories';
 import './styles.css';
 
 export const BedtimeForChild = ({ parentName, child, stories }: BedtimeComponentProps) => {
-	const favoriteNeice = (parentName === 'leanna' && child === "Millie Mae Cobleigh's") || child === "Millie Mae's" || child === "Millie's" ? true : false;
+	const favoriteNeice = parentName === 'leanna' && (child === "Millie Mae Cobleigh's" || child === "Millie Mae's" || child === "Millie's") ? true : false;
 	const notSingleStory = stories.length !== 1;
 
 	return (
@@ -89,15 +89,15 @@ const BookLines = ({ bookString }: { bookString: string }) => {
 	}
 };
 
-export { CinderellaBookString } from './samples/cinderella';
-export { GingerbreadManBookString } from './samples/gingerbread-man';
-export { GoldilocksBookString } from './samples/goldilocks';
-export { GreenEggsAndHamBookString } from './samples/green-eggs-and-ham';
-export { JackBeanstalkBookString } from './samples/jack-beanstalk';
-export { LittleRedRidingHoodBookString } from './samples/little-red-riding-hood';
-export { TheLoraxBookString } from './samples/lorax';
-export { MagicBlanketBookString } from './samples/magic-blanket';
-export { SleepyOwlBookString } from './samples/sleepy-owl';
-export { ThreeLittlePigsBookString } from './samples/three-little-pigs';
-export { TortoiseHareBookString } from './samples/tortoise-hare';
-export { TwinkleTwinkleBookString } from './samples/twinkle-twinkle';
+export { CinderellaBookObject, CinderellaBookString } from './samples/cinderella';
+export { GingerbreadManBookObject, GingerbreadManBookString } from './samples/gingerbread-man';
+export { GoldilocksBookObject, GoldilocksBookString } from './samples/goldilocks';
+export { GreenEggsAndHamBookObject, GreenEggsAndHamBookString } from './samples/green-eggs-and-ham';
+export { JackBeanstalkBookObject, JackBeanstalkBookString } from './samples/jack-beanstalk';
+export { LittleRedRidingHoodBookObject, LittleRedRidingHoodBookString } from './samples/little-red-riding-hood';
+export { TheLoraxBookObject, TheLoraxBookString } from './samples/lorax';
+export { MagicBlanketBookObject, MagicBlanketBookString } from './samples/magic-blanket';
+export { SleepyOwlBookObject, SleepyOwlBookString } from './samples/sleepy-owl';
+export { ThreeLittlePigsBookObject, ThreeLittlePigsBookString } from './samples/three-little-pigs';
+export { TortoiseHareBookObject, TortoiseHareBookString } from './samples/tortoise-hare';
+export { TwinkleTwinkleBookObject, TwinkleTwinkleBookString } from './samples/twinkle-twinkle';

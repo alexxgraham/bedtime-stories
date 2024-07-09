@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import TortoiseHareCover from './covers/TortoiseHare.jpg';
+
 export const TortoiseHareBookString = `
 Once upon a time, there was a speedy hare who bragged about how fast he could run.
 
@@ -18,3 +21,15 @@ The hare woke up with a start and ran as fast as he could, but it was too late.
 
 
 The tortoise had crossed the finish line, and the hare was too far behind to catch up.`;
+
+export const TortoiseHareBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'The Tortoise & The Hare',
+		author: 'Aesop',
+		cover: TortoiseHareCover,
+		ageRating: '3+',
+		bookLink: relativeUrl ? `${relativeUrl}/TortoiseHare` : 'TortoiseHare',
+		bookString: TortoiseHareBookString,
+		bookBackgroundColor: '#fef08a',
+	};
+};

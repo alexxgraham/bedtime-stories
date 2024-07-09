@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import GoldilocksThreeBrownBearsCover from './covers/GoldilocksThreeBrownBears.jpg';
+
 export const GoldilocksBookString = `
 Once upon a time, there were three bears who lived in a house in the forest.
 
@@ -141,3 +144,15 @@ And she never came back to the forest again.
 
 
 And the three bears never saw her again.`;
+
+export const GoldilocksBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'Goldilocks & The 3 Bears',
+		author: 'Robert Southey',
+		cover: GoldilocksThreeBrownBearsCover,
+		ageRating: '0+',
+		bookLink: relativeUrl ? `${relativeUrl}/Goldilocks+ThreeBears` : 'Goldilocks+ThreeBears',
+		bookString: GoldilocksBookString,
+		bookBackgroundColor: '#fed7aa',
+	};
+};

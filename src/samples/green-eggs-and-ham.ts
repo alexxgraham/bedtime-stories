@@ -1,3 +1,6 @@
+import { StoriesProps } from '~/types/stories';
+import GreenEggsAndHamCover from './covers/GreenEggsAndHam.jpg';
+
 export const GreenEggsAndHamBookString = `
 I am Sam.
 
@@ -303,3 +306,15 @@ Thank you,
 
 
 Sam-I-am!`;
+
+export const GreenEggsAndHamBookObject = ({ relativeUrl }: { relativeUrl?: string }): StoriesProps => {
+	return {
+		title: 'Green Eggs And Ham',
+		author: 'Dr. Seuss',
+		cover: GreenEggsAndHamCover,
+		ageRating: '0+',
+		bookLink: relativeUrl ? `${relativeUrl}/GreenEggs+Ham` : 'GreenEggs+Ham',
+		bookString: GreenEggsAndHamBookString,
+		bookBackgroundColor: '#d9f99d',
+	};
+};
