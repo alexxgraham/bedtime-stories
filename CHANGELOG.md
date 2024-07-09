@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.5
+
+### Patch Changes
+
+- f0eb8d9: changed parts of index to properly display content for stories array length
+
 ## 0.0.4
 
 ### Patch Changes
