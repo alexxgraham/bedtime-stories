@@ -13,34 +13,34 @@ type StoriesProps = {
 
 export const BedtimeForChild = ({ parentName, child, stories }: { parentName: string; child: string; stories: StoriesProps[] }) => {
 	const favoriteNeice = (parentName === 'leanna' && child === "Millie Mae Cobleigh's") || child === "Millie Mae's" || child === "Millie's" ? true : false;
-	const singleStory = stories.length !== 1;
+	const notSingleStory = stories.length !== 1;
 
 	return (
 		<>
 			<span className='fade' />
 			<article className='bedtime'>
-				<section className={`author ${!singleStory ? 'gap' : ''}`}>
+				<section className={`author ${notSingleStory ? 'gap' : ''}`}>
 					<span className='author-title'>
 						<p>{child}</p>
-						<p className='text-wrap text-center'>{!singleStory ? 'Bedtime Stories' : `${stories[0]?.title} Bedtime Story`}</p>
+						<p className='text-wrap text-center'>{notSingleStory ? 'Bedtime Stories' : `${stories[0]?.title} Bedtime Story`}</p>
 					</span>
-					{!singleStory && favoriteNeice ? (
+					{notSingleStory && favoriteNeice ? (
 						<p className='author-favorite-neice'>
 							<small>by your</small>
 							<br />
 							Uncle Alex
 						</p>
-					) : !singleStory ? (
+					) : notSingleStory ? (
 						<p className='author-alex'>
 							<small>by</small> Alex Graham
 						</p>
 					) : null}
 				</section>
-				<section className={`stories ${!singleStory ? 'multi-story' : ''}`}>
-					{!singleStory ? (
+				<section className={`stories ${notSingleStory ? 'multi-story' : ''}`}>
+					{notSingleStory ? (
 						<Stories stories={stories} />
 					) : (
-						<div className='story-content'>
+						<div className='flex flex-col align-center'>
 							<img src={stories[0]?.cover} alt='' className='story-cover' />
 							<article className='story-details' style={{ backgroundColor: `${stories[0]?.bookBackgroundColor}75` }}>
 								<BookLines bookString={stories[0]?.bookString} />
