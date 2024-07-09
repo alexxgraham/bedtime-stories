@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.11
+
+### Patch Changes
+
+- cf3ed1c: fixed cpx build script to correctly point to dist/covers
+
 ## 0.0.10
 
 ### Patch Changes
