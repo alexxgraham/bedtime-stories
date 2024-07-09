@@ -7,7 +7,7 @@
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "pnpm run build:css && tsup src/index.tsx --format esm,cjs --dts && cpx \"src/covers/**/*\" dist/covers && cp src/styles.css dist/",
+		"build": "pnpm run build:css && tsup src/index.tsx --format esm,cjs --dts && cpx 'src/samples/covers/*' dist/covers && cp src/styles.css dist/",
 		"build:css": "sass src/styles.scss src/styles.css",
 		"lint": "tsc",
 		"release": "pnpm run build && pnpm run lint && changeset publish"

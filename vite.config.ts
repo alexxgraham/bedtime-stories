@@ -9,7 +9,7 @@ export default defineConfig({
 			targets: [
 				{
 					src: 'node_modules/@ag108/bedtime-stories/dist/covers',
-					dest: 'assets',
+					dest: 'dist/covers',
 				},
 			],
 		}),
