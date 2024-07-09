@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.4
+
+### Patch Changes
+
+- 19a4fcb: slight edits to style exports
+
 ## 0.0.3
 
 ### Patch Changes
