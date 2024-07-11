@@ -3,12 +3,16 @@
 	"license": "MIT",
 	"private": false,
 	"version": "0.0.11",
+	"type": "module",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
+	"files": [
+		"dist/"
+	],
 	"scripts": {
-		"build": "pnpm run build:css && tsup src/index.tsx --format esm,cjs --dts && cpx 'src/samples/covers/*' dist/covers && cp src/styles.css dist/",
-		"build:css": "sass src/styles.scss src/styles.css",
+		"build": "pnpm run build:css && vite build",
+		"build:css": "sass src/styles.scss src/assets/styles.css",
 		"lint": "tsc",
 		"release": "pnpm run build && pnpm run lint && changeset publish"
 	},
@@ -22,6 +26,7 @@
 		"tsup": "^8.1.0",
 		"typescript": "^5.4.5",
 		"vite": "^5.3.3",
+		"vite-plugin-dts": "^3.9.1",
 		"vite-plugin-static-copy": "^1.0.6"
 	},
 	"peerDependencies": {

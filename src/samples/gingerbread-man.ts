@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import GingerbreadManCover from './covers/GingerbreadMan.jpg';
+// import GingerbreadManCover from './covers/GingerbreadMan.jpg';
 
 export const GingerbreadManBookString = `
 Once upon a time, an old woman and her husband lived alone in a little old house.
@@ -65,7 +65,7 @@ export const GingerbreadManBookObject = ({ relativeUrl }: { relativeUrl?: string
 	return {
 		title: 'The Gingerbread Man',
 		author: 'Old Eng. Folk Tale, unk',
-		cover: GingerbreadManCover,
+		cover: '/assets/covers/GingerbreadMan.jpg',
 		ageRating: '3+',
 		bookLink: relativeUrl ? `${relativeUrl}/TheGingerbreadMan` : 'TheGingerbreadMan',
 		bookString: GingerbreadManBookString,

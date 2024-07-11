@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import LittleStarCover from './covers/LittleStar.jpg';
+// import LittleStarCover from './covers/LittleStar.jpg';
 
 export const TwinkleTwinkleBookString = `
 Twinkle, twinkle, little star,
@@ -57,7 +57,7 @@ export const TwinkleTwinkleBookObject = ({ relativeUrl }: { relativeUrl?: string
 	return {
 		title: 'Twinkle Twinkle Little Star',
 		author: 'Jane Taylor',
-		cover: LittleStarCover,
+		cover: '/assets/covers/LittleStar.jpg',
 		ageRating: '0+',
 		bookLink: relativeUrl ? `${relativeUrl}/TwinkleTwinkle` : 'TwinkleTwinkle',
 		bookString: TwinkleTwinkleBookString,

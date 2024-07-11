@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import ThreeLittlePigsCover from './covers/ThreeLittlePigs.jpg';
+// import ThreeLittlePigsCover from './covers/ThreeLittlePigs.jpg';
 
 export const ThreeLittlePigsBookString = `
 Once upon a time there was an old sow with three little pigs, and as she had not enough to keep them, she sent them out to seek their fortune.
@@ -143,7 +143,7 @@ export const ThreeLittlePigsBookObject = ({ relativeUrl }: { relativeUrl?: strin
 	return {
 		title: 'The Three Little Pigs',
 		author: 'James Orchard',
-		cover: ThreeLittlePigsCover,
+		cover: '/assets/covers/ThreeLittlePigs.jpg',
 		ageRating: '0+',
 		bookLink: relativeUrl ? `${relativeUrl}/ThreeLittlePigs` : 'ThreeLittlePigs',
 		bookString: ThreeLittlePigsBookString,

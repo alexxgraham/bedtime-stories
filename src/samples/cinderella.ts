@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import CinderellaCover from './covers/Cinderella.jpg';
+// import CinderellaCover from './covers/Cinderella.jpg';
 
 export const CinderellaBookString = `
 Once upon a time there was a gentleman who married, for his second wife, the proudest and most haughty woman that was ever seen.
@@ -254,7 +254,7 @@ export const CinderellaBookObject = ({ relativeUrl }: { relativeUrl?: string }):
 	return {
 		title: 'Cinderella',
 		author: 'Charles Perrault',
-		cover: CinderellaCover,
+		cover: '/assets/covers/Cinderella.jpg',
 		ageRating: '0+',
 		bookLink: relativeUrl ? `${relativeUrl}/Cinderella` : 'Cinderella',
 		bookString: CinderellaBookString,

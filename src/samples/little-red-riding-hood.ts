@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import LittleRedRidingHoodCover from './covers/LittleRedRidingHood.jpg';
+// import LittleRedRidingHoodCover from './covers/LittleRedRidingHood.jpg';
 
 export const LittleRedRidingHoodBookString = `
 Once upon a time there lived in a certain village a little country girl, the prettiest creature that was ever seen. Her mother was excessively fond of her; and her grandmother doted on her still more. This good woman had a little red riding hood made for her. It suited the girl so extremely well that everybody called her Little Red Riding Hood.
@@ -86,7 +86,7 @@ export const LittleRedRidingHoodBookObject = ({ relativeUrl }: { relativeUrl?: s
 	return {
 		title: 'Little Red Riding Hood',
 		author: 'Charles Perrault',
-		cover: LittleRedRidingHoodCover,
+		cover: '/assets/covers/LittleRedRidingHood.jpg',
 		ageRating: '3+',
 		bookLink: relativeUrl ? `${relativeUrl}/LittleRedRidingHood` : 'LittleRedRidingHood',
 		bookString: LittleRedRidingHoodBookString,

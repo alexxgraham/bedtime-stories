@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import TheLoraxCover from './covers/TheLorax.jpg';
+// import TheLoraxCover from './covers/TheLorax.jpg';
 
 export const TheLoraxBookString = `
 At the far end of town
@@ -305,7 +305,7 @@ export const TheLoraxBookObject = ({ relativeUrl }: { relativeUrl?: string }): S
 	return {
 		title: 'The Lorax',
 		author: 'Dr. Seuss',
-		cover: TheLoraxCover,
+		cover: '/assets/covers/TheLorax.jpg',
 		ageRating: '3+',
 		bookLink: relativeUrl ? `${relativeUrl}/TheLorax` : 'TheLorax',
 		bookString: TheLoraxBookString,

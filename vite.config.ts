@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
 	plugins: [
@@ -8,13 +9,30 @@ export default defineConfig({
 		viteStaticCopy({
 			targets: [
 				{
-					src: 'node_modules/@ag108/bedtime-stories/dist/covers',
-					dest: 'dist/covers',
+					src: 'src/assets',
+					dest: '',
 				},
 			],
 		}),
+		dts({
+			insertTypesEntry: true,
+		}),
 	],
 	build: {
-		assetsInlineLimit: 0,
+		lib: {
+			entry: 'src/index.tsx',
+			name: 'BedtimeStories',
+			formats: ['es', 'cjs'],
+			fileName: (format) => `index.${format}.js`,
+		},
+		rollupOptions: {
+			external: ['react', 'react-dom'],
+			output: {
+				globals: {
+					react: 'React',
+					'react-dom': 'ReactDOM',
+				},
+			},
+		},
 	},
 });

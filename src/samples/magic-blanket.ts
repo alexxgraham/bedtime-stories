@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import MagicBlanketCover from './covers/MagicBlanket.jpg';
+// import MagicBlanketCover from './covers/MagicBlanket.jpg';
 
 export const MagicBlanketBookString = `
 In a small village nestled between rolling hills and whispering forests, there lived a young girl named Lily. Lily was known for her kindness and her love for adventure.
@@ -41,7 +41,7 @@ export const MagicBlanketBookObject = ({ relativeUrl }: { relativeUrl?: string }
 	return {
 		title: 'The Magic Blanket',
 		author: 'Alex',
-		cover: MagicBlanketCover,
+		cover: '/assets/covers/MagicBlanket.jpg',
 		ageRating: '0+',
 		bookLink: relativeUrl ? `${relativeUrl}/MagicBlanket` : 'MagicBlanket',
 		bookString: MagicBlanketBookString,

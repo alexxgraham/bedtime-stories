@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import JackBeanstalkCover from './covers/JackBeanstalk.jpg';
+// import JackBeanstalkCover from './covers/JackBeanstalk.jpg';
 
 export const JackBeanstalkBookString = `
 Once upon a time there was a poor widow who lived in a little cottage with her only son Jack.
@@ -284,7 +284,7 @@ export const JackBeanstalkBookObject = ({ relativeUrl }: { relativeUrl?: string 
 	return {
 		title: 'Jack & The Beanstalk',
 		author: 'Benjamin Tabart',
-		cover: JackBeanstalkCover,
+		cover: '/assets/covers/JackBeanstalk.jpg',
 		ageRating: '0+',
 		bookLink: relativeUrl ? `${relativeUrl}/Jack+Beanstalk` : 'Jack+Beanstalk',
 		bookString: JackBeanstalkBookString,

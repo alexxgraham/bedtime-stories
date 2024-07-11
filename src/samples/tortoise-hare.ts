@@ -1,5 +1,5 @@
 import { StoriesProps } from '~/types/stories';
-import TortoiseHareCover from './covers/TortoiseHare.jpg';
+// import TortoiseHareCover from './covers/TortoiseHare.jpg';
 
 export const TortoiseHareBookString = `
 Once upon a time, there was a speedy hare who bragged about how fast he could run.
@@ -26,7 +26,7 @@ export const TortoiseHareBookObject = ({ relativeUrl }: { relativeUrl?: string }
 	return {
 		title: 'The Tortoise & The Hare',
 		author: 'Aesop',
-		cover: TortoiseHareCover,
+		cover: '/assets/covers/TortoiseHare.jpg',
 		ageRating: '3+',
 		bookLink: relativeUrl ? `${relativeUrl}/TortoiseHare` : 'TortoiseHare',
 		bookString: TortoiseHareBookString,

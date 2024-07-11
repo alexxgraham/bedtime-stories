@@ -1,6 +1,6 @@
 import React from 'react';
 import { BedtimeComponentProps, StoriesProps } from 'types/stories';
-import './styles.css';
+import './assets/styles.css';
 
 export const BedtimeForChild = ({ parentName, child, stories }: BedtimeComponentProps) => {
 	const favoriteNeice = parentName === 'leanna' && (child === "Millie Mae Cobleigh's" || child === "Millie Mae's" || child === "Millie's") ? true : false;
