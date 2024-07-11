@@ -1,5 +1,11 @@
 # @ag108/bedtime-stories
 
+## 0.0.13
+
+### Patch Changes
+
+- 54cc589: added react and react-dom to vite.config rollupOptions to resolve build issue
+
 ## 0.0.12
 
 ### Patch Changes
