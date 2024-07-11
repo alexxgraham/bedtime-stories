@@ -1,5 +1,12 @@
 # @ag108/bedtime-stories
 
+## 0.0.12
+
+### Patch Changes
+
+- 7cf15ff: reworked vite & asset exports; styles, fonts, cover images.
+- 7cf15ff: fixed scss upcoming depreciation warning for media-queries appearing before css-rules
+
 ## 0.0.11
 
 ### Patch Changes
